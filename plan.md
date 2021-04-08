@@ -13,14 +13,15 @@
      - generates number in list when clicked
      - add event listener to button
      - add number to list
-     - function which generates number
      - function which adds to list
    - lists with number
 
 3. User can pick higher or lower
 
    - button with higher or lower options
-   - when you select a button, it will then..
+    - if user select higher button, we will compare current selection against the random number generator
+    - if higher, then message will show that its correct, if not, will show as wrong 
+   - when you select Lower, compare numbers, if lower show correct 
 
 4. Computer shows next number and tells user whether they were right or wrong
 
