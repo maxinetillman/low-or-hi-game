@@ -48,7 +48,7 @@ function checkHigher() {
   // 9.  PUT(RANDOM NUMBER BETWEEN 1 AND 10)
   // 10. SET AS Y
   let newNumber = getRandomNumber();
-  let previousNumber = numberList.lastElementChild.innerText;
+
   // 11. PRINT Y
   printNumber(newNumber);
 
@@ -57,26 +57,27 @@ function checkHigher() {
   //      b. PUT Y
   //      c. SET AS X
   //      d. GO TO LINE 4
-  if (newNumber > previousNumber) {
+  if (newNumber > currentNumber) {
     guessResult.innerText = "Winner!";
   } else {
     guessResult.innerText = "Loser!";
   }
+  currentNumber = newNumber;
 }
 
 higherButton.addEventListener("click", checkHigher);
 
 function checkLower() {
   let newNumber = getRandomNumber();
-  let previousNumber = numberList.lastElementChild.innerText;
   // 11. PRINT Y
   printNumber(newNumber);
 
-  if (newNumber < previousNumber) {
+  if (newNumber < currentNumber) {
     guessResult.innerText = "Winner!";
   } else {
     guessResult.innerText = "Loser!";
   }
+  currentNumber = newNumber;
 }
 
 lowerButton.addEventListener("click", checkLower);
