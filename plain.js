@@ -8,7 +8,9 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 10) + 1;
 }
 
-let x = getRandomNumber();
+function startGame() {
+  let x = getRandomNumber();
+}
 
 // PRINT x
 
@@ -29,6 +31,8 @@ function getUserInput(message) {
 }
 
 let guess = getUserInput("Enter 'higher' or 'lower'");
+
+// Search 'while something is not true, repeat thing js'
 
 while (guess !== "higher" && guess !== "lower") {
   guess = getUserInput("You can only enter 'higher' or 'lower'...");
